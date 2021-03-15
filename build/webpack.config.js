@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const html = require('html-loader');
 
 module.exports = {
     entry: {
@@ -43,7 +44,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'static/',
+                            outputPath: 'assets/images/',
                             useRelativePath: true,
                         }
                     },
@@ -58,7 +59,7 @@ module.exports = {
                                 enabled: true,
                             },
                             pngquant: {
-                                quality: '65-90',
+                                quality: [0.65, 0.90],
                                 speed: 4
                             },
                             gifsicle: {
@@ -70,7 +71,14 @@ module.exports = {
                         }
                     },
                 ]
-            }
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+                options: {
+                    sources: true,
+                }
+            },
         ]
     },
     plugins: [
@@ -87,6 +95,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'FitApp',
             template: './src/index.handlebars'
-        })
+        }),
     ]
 };

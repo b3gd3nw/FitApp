@@ -1,4 +1,4 @@
-*,*:before,*:after{box-sizing:border-box}body{margin:40px;font-family:'Open Sans', 'sans-serif';background-color:#fff;color:#444}h1,p{margin:0 0 1em 0}.wrapper{display:flex;min-height:100%;overflow:hidden;flex-direction:column}.container{width:1200px;margin:0 auto}
+*,*:before,*:after{box-sizing:border-box}body{margin:40px;font-family:'Open Sans', 'sans-serif';background-color:#fff;color:#444}h1,p{margin:0 0 1em 0}.wrapper{display:flex;min-height:100%;overflow:hidden;flex-direction:column}.header{background-image:url(assets/images/header-background.png)}.header__logo{background-image:url(assets/images/FitApp-logo.png)}.container{width:1200px;margin:0 auto}
 
 
 /*# sourceMappingURL=bundle-styles.css.map*/
