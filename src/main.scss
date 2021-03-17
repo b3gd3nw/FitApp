@@ -212,17 +212,17 @@ header a {
 }
 
 .download__item {
-  width: 130px;
+  width: 145px;
   height: 46px;
   margin-right: 30px;
 }
 
 .appstore {
-  background: url("./assets/images/Appstore.png");
+  background: url("./assets/images/Appstore.png") no-repeat center;
 }
 
 .googleplay {
-  background: url("./assets/images/Google_Play.png");
+  background: url("./assets/images/Google_Play.png") no-repeat center;
 }
 
 .header__sidebar {
@@ -414,6 +414,28 @@ header a {
   }
   .sm {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    width: 540px;
+  }
+  .features__sidebar__image {
+    display: none;
+  }
+  .features__content__left {
+    background: #fff;
+  }
+  .features__sidebar__item {
+    display: flex;
+    justify-content: center;
+  }
+  .features__sidebar__content {
+    padding: 0;
+  }
+  .item_1, .item_2, .item_3, .item_4 {
+    padding: 0 !important;
   }
 }
 
