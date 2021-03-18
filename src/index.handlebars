@@ -13,25 +13,30 @@
     <!-- Header -->
    <header class="header">
        <!-- Header container -->
-        <div class="container">
+        <div class="container" id="firstDiv">
             <div class="row header__row">
                 <div class="col-2">
                     <div class="header__logo">
                         <img class="header__logo" src="./assets/images/FitApp-logo.png" alt="Fit App">
                     </div>
                 </div>
-                <div class="col-8">
+                <div class="col-8 order-3">
                     <nav class="header__nav">
-                        <ul class="menu__list">
-                            <li><a href="#features" class="menu__link">About</a></li>
-                            <li><a href="" class="menu__link">Features</a></li>
-                            <li><a href="" class="menu__link">Reviews</a></li>
-                            <li><a href="" class="menu__link">Blog</a></li>
-                            <li><a href="" class="menu__link">Support</a></li>
+                        <span id="trigger" class="trigger">
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                        </span>
+                        <ul class="menu__list" id="menu">
+                            <li><a id="firstButton" href="#" class="menu__link">About</a></li>
+                            <li><a id="secondButton" href="#features" class="menu__link">Features</a></li>
+                            <li><a id="thirdButton" href="#" class="menu__link">Reviews</a></li>
+                            <li><a id="fourthButton" href="#" class="menu__link">Blog</a></li>
+                            <li><a id="fifthButton" href="#" class="menu__link">Support</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-2">
+                <div class="col-2 order-2">
                     <a href="" class="btn">Get App</a>
                 </div>
             </div>
@@ -60,10 +65,9 @@
    </header>
    <!-- Header -->
    <!-- Features -->
-   <p><a name="features"></a></p>
    <section class="features" id="features">
        <!-- Features container -->
-       <div class="container">
+       <div class="container" id="secondDiv">
             <div class="row features__row">
                 <div class="col-6 md">
                     <div class="features__content__left">
@@ -109,7 +113,7 @@
    <!-- Plan -->
    <section class="plan">
        <!-- Plan container -->
-       <div class="container">
+       <div class="container" id="thirdDiv">
            <div class="row">
                <div class="col-12">
                    <div class="plan__content">
@@ -128,7 +132,7 @@
    <!-- Manage -->
    <section class="manage">
        <!-- Manage container -->
-       <div class="container">
+       <div class="container" id="fourthDiv">
            <div class="row">
                <div class="col-6 sm">
                    <div class="manage__content__left">

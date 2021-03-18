@@ -1,4 +1,6 @@
 import './main.scss';
+import './assets/js/anchor.js';
+import './assets/js/mobileNav.js'
 require('./assets/images/FitApp-logo.png');
 require('./assets/images/App_Icon.png');
 require('./assets/images/iPhone_mock_up.png');
