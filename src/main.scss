@@ -174,12 +174,29 @@ header a {
   display: flex;
 }
 
+.mobile__menu__list {
+  display: none;
+}
+
+.mobile__menu__list li {
+  border-top: 1px solid #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile__menu__list li:last-child {
+    border-bottom: 1px solid #fff;
+}
+
+.mobile__menu__list li a {
+  text-decoration: none;
+}
+
 .menu__list li:not(:last-child)  {
   margin-right: 60px;
 }
 
 .menu__list li a {
-  text-transform: uppercase;
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -258,6 +275,25 @@ header a {
   display: flex;
   flex-direction: column;
   padding: 135px 24px;
+}
+
+.features__sidebar__item>img {
+   opacity: 1;
+   -webkit-transform: scale(1,1);
+   -webkit-transition-timing-function: ease-out;
+   -webkit-transition-duration: 550ms;
+   -moz-transform: scale(1,1);
+   -moz-transition-timing-function: ease-out;
+   -moz-transition-duration: 550ms;
+}
+
+.features__sidebar__item>img:hover {
+  -webkit-transform: scale(1.2,1.2);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1.2,1.2);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
 }
 
 .features__sidebar__content .item_2, .item_4 {
@@ -399,31 +435,41 @@ header a {
   .container {
     width: 720px;
   }
+  .col-1-md {
+    width: 4.33%;
+  }
+  .col-8-md {
+    width: 62.66%;
+  }
   .menu__list {
     display: none;
   }
   .trigger {
-    display:inline-block;
-    margin:3px;
-    cursor:pointer;
+    display:  inline-block;
+    margin: 3px;
+    cursor: pointer;
   }
   .trigger i{
-    display:block;
-    width:30px;
-    height:6px;
-    margin:4px auto;
-    background:#fff;
+    display:  block;
+    width:  30px;
+    height: 6px;
+    margin: 4px auto;
+    background: #fff;
   }
   .show {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .header__nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-
+  .header__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
   .order-3 {
     order: 2;
   }
@@ -482,4 +528,3 @@ header a {
     margin-left: auto;
   }
 }
-

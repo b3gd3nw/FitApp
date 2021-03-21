@@ -113,6 +113,12 @@ function scrollIt(
     scroll();
 }
 
-secondButton.addEventListener('click',()=>{
-    scrollIt(secondDiv,2000,'linear',()=>{console.log("скролл завершился")})
-})
+let items = document.querySelectorAll('.link');
+
+items.forEach(function(item){
+      item.onclick=function(){
+        console.log(item.classList[1]);
+        test = item.classList[1].toString();
+        scrollIt(test,2000,'linear')
+      }
+});

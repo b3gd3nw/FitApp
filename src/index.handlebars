@@ -20,7 +20,7 @@
                         <img class="header__logo" src="./assets/images/FitApp-logo.png" alt="Fit App">
                     </div>
                 </div>
-                <div class="col-8 order-3">
+                <div class="col-8 col-1-md col-1-sm order-3">
                     <nav class="header__nav">
                         <span id="trigger" class="trigger">
                           <i></i>
@@ -28,17 +28,32 @@
                           <i></i>
                         </span>
                         <ul class="menu__list" id="menu">
-                            <li><a id="firstButton" href="#" class="menu__link">About</a></li>
-                            <li><a id="secondButton" href="#features" class="menu__link">Features</a></li>
-                            <li><a id="thirdButton" href="#" class="menu__link">Reviews</a></li>
-                            <li><a id="fourthButton" href="#" class="menu__link">Blog</a></li>
-                            <li><a id="fifthButton" href="#" class="menu__link">Support</a></li>
+                            <li><a class="link firstButton" href="#" class="menu__link">About</a></li>
+                            <li><a class="link secondDiv" href="#features" class="menu__link">Features</a></li>
+                            <li><a class="link thirdButton" href="#" class="menu__link">Reviews</a></li>
+                            <li><a class="link fourthButton" href="#" class="menu__link">Blog</a></li>
+                            <li><a class="link fifthButton" href="#" class="menu__link">Support</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-2 order-2">
+                <div class="col-2 col-8-md order-2">
+                  <div class="header__btn">
                     <a href="" class="btn">Get App</a>
+                  </div>
                 </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="mobile__nav">
+                  <ul class="mobile__menu__list" id="mobile_menu">
+                      <li><a class="link firstButton" href="#" class="menu__link">About</a></li>
+                      <li><a class="link secondButton" href="#features" class="menu__link">Features</a></li>
+                      <li><a class="link thirdButton" href="#" class="menu__link">Reviews</a></li>
+                      <li><a class="link fourthButton" href="#" class="menu__link">Blog</a></li>
+                      <li><a class="link fifthButton" href="#" class="menu__link">Support</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="header_content__row">
                 <div class="row">
@@ -78,21 +93,21 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="features__sidebar__content">
+                                <div class="features__sidebar__content" id="items">
                                     <div class="row features__sidebar__item item_1">
-                                        <img src="./assets/images/features-item-bell.png" alt="">
+                                        <img class="item text1" src="./assets/images/features-item-bell.png" alt="">
                                     </div>
                                     <div class="row features__sidebar__item item_2">
-                                        <img src="./assets/images/features-item-calendar.png" alt="">
+                                        <img class="item text2" src="./assets/images/features-item-calendar.png" alt="">
                                     </div>
                                     <div class="row features__sidebar__item item_3">
-                                        <img src="./assets/images/features-item-graph.png" alt="">
+                                        <img class="item text3" src="./assets/images/features-item-graph.png" alt="">
                                     </div>
                                     <div class="row features__sidebar__item item_4">
-                                        <img src="./assets/images/features-item-heart.png" alt="">
+                                        <img class="item text4" src="./assets/images/features-item-heart.png" alt="">
                                     </div>
                                     <div class="row features__sidebar__item item_5">
-                                        <img src="./assets/images/features-item-list.png" alt="">
+                                        <img class="item text5" src="./assets/images/features-item-list.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -101,8 +116,8 @@
                 </div>
                 <div class="col-6 md">
                     <div class="features__content">
-                        <h1 class="features__title title black-text">Best calorie <span class="green"> counter app!</span> </h1>
-                        <p class="features__text gray-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <h1 id="features__title" class="features__title title black-text">Best calorie <span class="green"> counter app!</span> </h1>
+                        <p id="features__text" class="features__text gray-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                 </div>
             </div>
