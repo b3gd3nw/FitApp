@@ -257,7 +257,7 @@ header a {
 }
 
 .features__row {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .features__content__left {
@@ -417,6 +417,9 @@ header a {
     justify-content: flex-end;
     padding-top: 30px;
   }
+  .download__list {
+    padding: 30px 0;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -526,5 +529,30 @@ header a {
   }
   .menu-open {
     margin-left: auto;
+  }
+  .manage__cards {
+    display: none;
+  }
+  .manage__content__left {
+    padding: 60px 0;
+  }
+  .sm, .md {
+    width: auto;
+  }
+  .plan__content {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header__btn {
+    display: none;
+  }
+  .md {
+    width: 100%;
+    margin: 0 !important;
+  }
+  .download__item {
+    margin-right: 5px;
   }
 }
