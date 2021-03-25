@@ -44,7 +44,7 @@ h1, p {
   height: 100%;
 }
 
-.card__middle__content {
+.card__content {
   width: 190px;
 }
 
@@ -73,14 +73,14 @@ h1, p {
   padding-left: 10px;
 }
 
-.card__time__title {
+.card__time .card__title {
   font-size: 25px;
   text-align: right;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-.card__time__text {
+.card__time .card__text {
   font-size: 16px;
   font-weight: bold;
   text-align: right;
@@ -170,33 +170,33 @@ header a {
   justify-content: flex-end;
 }
 
-.menu__list {
+.header__nav .menu__list {
   display: flex;
 }
 
-.mobile__menu__list {
+.mobile__nav .menu__list {
   display: none;
 }
 
-.mobile__menu__list li {
+.mobile__nav .menu__list li {
   border-top: 1px solid #fff;
   width: 100%;
   text-align: center;
 }
 
-.mobile__menu__list li:last-child {
+.mobile__nav .menu__list li:last-child {
     border-bottom: 1px solid #fff;
 }
 
-.mobile__menu__list li a {
+.mobile__nav .menu__list li a {
   text-decoration: none;
 }
 
-.menu__list li:not(:last-child)  {
+.header__nav .menu__list li:not(:last-child)  {
   margin-right: 60px;
 }
 
-.menu__list li a {
+.header__nav .menu__list li a {
   text-transform: capitalize;
   text-decoration: none;
 }
@@ -257,27 +257,26 @@ header a {
 }
 
 .features__row {
-  padding-top: 60px;
 }
 
-.features__content__left {
+.features__sidebar {
   background: url("./assets/images/elipse.png") no-repeat center;
 }
 
-.features__sidebar__image {
+.features__sidebar .features__image {
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-right: 10px;
 }
 
-.features__sidebar__content {
+.features__sidebar .features__content {
   display: flex;
   flex-direction: column;
   padding: 135px 24px;
 }
 
-.features__sidebar__item>img {
+.features__sidebar .features__content .features__item>img {
    opacity: 1;
    -webkit-transform: scale(1,1);
    -webkit-transition-timing-function: ease-out;
@@ -287,7 +286,7 @@ header a {
    -moz-transition-duration: 550ms;
 }
 
-.features__sidebar__item>img:hover {
+.features__sidebar .features__content .features__item>img:hover {
   -webkit-transform: scale(1.2,1.2);
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 550ms;
@@ -296,11 +295,11 @@ header a {
     -moz-transition-duration: 550ms;
 }
 
-.features__sidebar__content .item_2, .item_4 {
+.features__sidebar .features__content .item_2, .item_4 {
   padding-left: 105px;
 }
 
-.features__sidebar__content .item_3 {
+.features__sidebar .features__content .item_3 {
   padding-left: 80px;
 }
 
@@ -394,6 +393,9 @@ header a {
   .container {
     width: 1140px;
   }
+  .plan__title {
+    padding-top: 60px;
+  }
 }
 
 @media screen and (max-width: 1370px) {
@@ -417,7 +419,10 @@ header a {
     padding: 0;
     text-align: center;
   }
-  .features__sidebar__image {
+  .features__sidebar .features__content .features__item {
+    display: flex;
+  }
+  .features__sidebar .features__image {
     justify-content: flex-end;
     padding-top: 30px;
   }
@@ -448,7 +453,7 @@ header a {
   .col-8-md {
     width: 62.66%;
   }
-  .menu__list {
+  .header__nav .menu__list {
     display: none;
   }
   .trigger {
@@ -463,7 +468,7 @@ header a {
     margin: 4px auto;
     background: #fff;
   }
-  .show {
+  .mobile__nav .show {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -502,20 +507,18 @@ header a {
   .container {
     width: 540px;
   }
-  .features__sidebar__image {
+  .features__sidebar .features__image {
     display: none;
   }
-  .features__content__left {
+  .features__sidebar {
     background: #fff;
+    padding: 0;
   }
-  .features__sidebar__item {
+  .features__sidebar .features__content .features__item {
     display: flex;
     justify-content: center;
   }
-  .features__sidebar__content {
-    padding: 0;
-  }
-  .item_1, .item_2, .item_3, .item_4 {
+  .features__sidebar .features__content .item_1, .features__sidebar .features__content .item_2, .features__sidebar .features__content .item_3,.features__sidebar .features__content .item_4 {
     padding: 0 !important;
   }
 }
@@ -543,9 +546,6 @@ header a {
   .sm, .md {
     width: auto;
   }
-  .plan__content {
-    padding: 60px 0;
-  }
 }
 
 @media screen and (max-width: 420px) {
@@ -558,5 +558,17 @@ header a {
   }
   .download__item {
     margin-right: 5px;
+  }
+  .features__sidebar .features__content {
+    display: none;
+  }
+  .features__row {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .title {
+    font-size: 46px;
   }
 }

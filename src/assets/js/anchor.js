@@ -1,4 +1,3 @@
-// функция скролла
 function scrollIt(
     destination,
     duration = 200,
@@ -47,7 +46,6 @@ function scrollIt(
         }
     };
 
-    // Определение координаты элемента по вертикали от начала документа
     function pageY(elem) {
         return elem.offsetParent
             ? elem.offsetTop + pageY(elem.offsetParent)
@@ -90,23 +88,19 @@ function scrollIt(
             "now" in window.performance ? performance.now() : new Date().getTime();
         const time = Math.min(1, (now - startTime) / duration);
         const timeFunction = easings[easing](time);
-        // эта функция скролит по чуть чуть
         window.scroll(
             0,
             Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
         );
-        //усоловие если время истекло, то поставь в конечную точку анимации
         if (duration <= now - startTime) {
             return;
         }
-        // это условие проверяет условие кончилась ли аницация. в данном случае проверяет дошли ли до точки назначения
         if (window.pageYOffset === destinationOffsetToScroll) {
             if (callback) {
                 callback();
             }
             return;
         }
-        // эта функция запускает следующую итерацию анимации
         requestAnimationFrame(scroll);
     }
 
@@ -118,7 +112,8 @@ let items = document.querySelectorAll('.link');
 items.forEach(function(item){
       item.onclick=function(){
         console.log(item.classList[1]);
-        test = item.classList[1].toString();
-        scrollIt(test,2000,'linear')
+        let id = item.classList[1].toString();
+        let target = document.getElementById(id);
+        scrollIt(target,1000,'linear')
       }
 });
