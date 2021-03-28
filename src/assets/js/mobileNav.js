@@ -1,5 +1,7 @@
-document.getElementById("trigger").onclick = function() {open()};
+document.getElementById('trigger').onclick = function () {
+   open()
+ }
 
-function open() {
-    document.getElementById("mobile_menu").classList.toggle("show");
+function open () {
+  document.getElementById('mobile_menu').classList.toggle('show')
 }

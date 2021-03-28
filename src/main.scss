@@ -118,7 +118,6 @@ h1, h2, h3, p {
 
 /* Helper styles */
 .btn {
-  width: 140px;
   height: 42px;
   display: block;
   padding: 6px 12px;
@@ -273,7 +272,7 @@ h1, p {
 /*HEADER-ZONE*/
 
 .header {
-  background: url('./assets/images/header-background_test.png') no-repeat center top / cover;
+  background: url('assets/images/header-background_test.png') no-repeat center top / cover;
 }
 
 .nav {
@@ -297,17 +296,17 @@ h1, p {
   display: none;
 }
 //----------------------------------------- need fix this
-.mobile__nav .menu__list li {
+.mobile-nav .menu-list li {
   border-top: 1px solid #fff;
   width: 100%;
   text-align: center;
 }
 
-.mobile__nav .menu__list li:last-child {
+.mobile-nav .menu-list li:last-child {
     border-bottom: 1px solid #fff;
 }
 
-.mobile__nav .menu__list li a {
+.mobile-nav .menu-list li a {
   text-decoration: none;
 }
 
@@ -326,11 +325,11 @@ h1, p {
 }
 
 .appstore {
-  background: url("./assets/images/Appstore.png") no-repeat left;
+  background: url("assets/images/Appstore.png") no-repeat left;
 }
 
 .googleplay {
-  background: url("./assets/images/Google_Play.png") no-repeat left;
+  background: url("assets/images/Google_Play.png") no-repeat left;
 }
 
 .header-sidebar {
@@ -343,15 +342,11 @@ h1, p {
 
 /*FEATURES-ZONE*/
 
-.features {
- // background: url("./assets/images/features-background_test.png") no-repeat center top / cover;
-}
-
 .features__row {
 }
 
 .features-sidebar {
-  background: url("./assets/images/elipse.png") no-repeat center;
+  background: url("assets/images/elipse.png") no-repeat center;
 }
 
 .features-sidebar .features-image {
@@ -399,7 +394,7 @@ h1, p {
 /*PLAN-ZONE*/
 
 .plan {
-  background: url("./assets/images/plan-background.png") no-repeat center top / cover;
+  background: url("assets/images/plan-background.png") no-repeat center top / cover;
 }
 
 .plan-content {
@@ -423,10 +418,6 @@ h1, p {
   padding: 200px 5px;
 }
 
-.manage__title {
-  font-size: 48px;
-}
-
 .manage-cards {
   align-items: center;
   padding: 90px 9px;
@@ -437,20 +428,11 @@ h1, p {
 /*FOOTER-ZONE*/
 
 .footer {
-  background: url("./assets/images/footer-background.png") no-repeat center top / cover;
+  background: url("assets/images/footer-background.png") no-repeat center top / cover;
 }
 
 .footer-content {
   padding: 0 145px;
-}
-
-.footer__title {
-  margin-top: 110px;
-  margin-bottom: 35px;
-}
-
-.footer__text {
-  margin-bottom: 60px;
 }
 
 .footer-content .btn {
@@ -467,41 +449,41 @@ h1, p {
   .container {
     width: 1140px;
   }
-  .plan__title {
-    padding-top: 60px;
-  }
 }
 
 @media screen and (max-width: 1370px) {
-  .header__sidebar {
+  .header-sidebar {
     display: none;
   }
   .md {
     width: 100%;
   }
-  .header__content {
+  .header-content {
     text-align: center;
   }
-  .download__list {
+  .download-list {
     justify-content: center;
   }
-  .features__row {
-    display: flex;
-    flex-direction: column-reverse;
+  .features-sidebar {
+    display: none;
   }
-  .features__content {
-    padding: 0;
+  .features-content {
+    padding: 50px 0;
     text-align: center;
   }
-  .features__sidebar .features__content .features__item {
+  .plan-content {
+    padding: 0;
+  }
+  .card-time {
     display: flex;
+    flex-direction: column;
   }
-  .features__sidebar .features__image {
-    justify-content: flex-end;
-    padding-top: 30px;
+  .manage-content {
+    padding: 100px 5px;
+    text-align: center;
   }
-  .download__list {
-    padding: 30px 0;
+  .footer-content {
+    padding: 0;
   }
 }
 
@@ -509,25 +491,19 @@ h1, p {
   .container {
     width: 960px;
   }
-  .plan__content {
-    padding: 0;
-  }
-  .footer__content {
-    padding: 0;
-  }
 }
 
 @media screen and (max-width: 991px) {
   .container {
     width: 720px;
   }
-  .col-1-md {
-    width: 4.33%;
+  .col-md-7 {
+    width: 54%;
   }
-  .col-8-md {
-    width: 62.66%;
+  .col-md-3 {
+    width: 21%;
   }
-  .header__nav .menu__list {
+  .nav .menu-list {
     display: none;
   }
   .trigger {
@@ -542,19 +518,10 @@ h1, p {
     margin: 4px auto;
     background: #fff;
   }
-  .mobile__nav .show {
+  .mobile-nav .show {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .header__nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .header__btn {
-    display: flex;
-    justify-content: flex-end;
   }
   .order-3 {
     order: 2;
@@ -565,13 +532,6 @@ h1, p {
   .container {
     width: 540px;
   }
-  .manage__content__left {
-    padding: 0;
-    text-align: center;
-  }
-  .footer__title {
-    font-size: 50px;
-  }
   .sm {
     width: 100%;
   }
@@ -581,19 +541,14 @@ h1, p {
   .container {
     width: 540px;
   }
-  .features__sidebar .features__image {
-    display: none;
+  .col-sm-2 {
+    width: 12.66667%;
   }
-  .features__sidebar {
-    background: #fff;
-    padding: 0;
+  .col-sm-6 {
+    width: 46%;
   }
-  .features__sidebar .features__content .features__item {
-    display: flex;
-    justify-content: center;
-  }
-  .features__sidebar .features__content .item_1, .features__sidebar .features__content .item_2, .features__sidebar .features__content .item_3,.features__sidebar .features__content .item_4 {
-    padding: 0 !important;
+  .col-sm-4 {
+    width: 29%;
   }
 }
 
@@ -611,11 +566,8 @@ h1, p {
   .menu-open {
     margin-left: auto;
   }
-  .manage__cards {
+  .manage-cards {
     display: none;
-  }
-  .manage__content__left {
-    padding: 60px 0;
   }
   .sm, .md {
     width: auto;
@@ -623,21 +575,21 @@ h1, p {
 }
 
 @media screen and (max-width: 420px) {
-  .header__btn {
-    display: none;
+  .col-m-5 {
+    width: 43.3331%;
   }
   .md {
     width: 100%;
     margin: 0 !important;
   }
-  .download__item {
+  .col-m-6 {
+    width: 47.3333%;
+  }
+  .download-item {
     margin-right: 5px;
   }
-  .features__sidebar .features__content {
+  .header-btn {
     display: none;
-  }
-  .features__row {
-    padding: 60px 0;
   }
 }
 
